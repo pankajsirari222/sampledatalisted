@@ -4,11 +4,11 @@ const app = express();
 
 app.use(cors());
 app.get("/", (req, res) => {
-	res.json({
-		data1: { name: "Week 1", "User 1": 100, "User 2": 200 },
-		data2: { name: "Week 2", "User 1": 250, "User 2": 300 },
-		data3: { name: "Week 3", "User 1": 400, "User 2": 150 },
-	});
+	res.json([
+		{ name: "Basic Tree", value: 400 },
+		{ name: "Custom Short Pants", value: 300 },
+		{ name: "Super Hoodies", value: 300 },
+	]);
 });
 
 app.get("/pie", (req, res) => {
