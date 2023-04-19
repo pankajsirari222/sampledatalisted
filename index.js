@@ -1,7 +1,8 @@
 const express = require("express");
-
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
 app.get("/", (req, res) => {
 	res.json({
 		data1: { name: "Week 1", "User 1": 100, "User 2": 200 },
